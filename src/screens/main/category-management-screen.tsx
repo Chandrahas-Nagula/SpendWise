@@ -18,6 +18,7 @@ import { useCategories } from "../../hooks/use-categories";
 import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
 import { Skeleton } from "../../components/ui/skeleton";
+import { CategoryIcon } from "../../components/ui/category-icon";
 import { LinearGradient } from "expo-linear-gradient";
 import { BRAND } from "../../constants/colors";
 
@@ -130,7 +131,11 @@ export const CategoryManagementScreen: React.FC = () => {
           {categories.map((cat, i) => (
             <React.Fragment key={cat.id || i}>
               <View style={styles.catRow}>
-                <Text style={styles.catIcon}>{cat.icon}</Text>
+                <CategoryIcon
+                  icon={cat.icon}
+                  size={22}
+                  style={styles.catIcon as any}
+                />
                 <Text style={[styles.catName, { color: colors.TEXT_PRIMARY }]}>
                   {cat.name}
                 </Text>
@@ -259,7 +264,7 @@ export const CategoryManagementScreen: React.FC = () => {
                       },
                     ]}
                   >
-                    <Text style={{ fontSize: 24 }}>{icon}</Text>
+                    <CategoryIcon icon={icon} size={24} />
                   </Pressable>
                 ))}
               </ScrollView>

@@ -23,6 +23,7 @@ import { SupabaseExpenseRepository } from "../../services/repositories/supabase-
 import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { BRAND } from "../../constants/colors";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
+import { CategoryIcon } from "../../components/ui/category-icon";
 import { formatINR } from "../../utils/greeting";
 import { Routes } from "../../constants/routes";
 
@@ -248,7 +249,9 @@ const DetailRow: React.FC<{
       {label}
     </Text>
     <View style={styles.detailValueRow}>
-      {icon && <Text style={styles.detailIcon}>{icon}</Text>}
+      {icon && (
+        <CategoryIcon icon={icon} size={20} style={styles.detailIcon as any} />
+      )}
       <Text style={[styles.detailValue, { color: colors.TEXT_PRIMARY }]}>
         {value}
       </Text>

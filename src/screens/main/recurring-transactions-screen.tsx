@@ -21,6 +21,7 @@ import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { BRAND } from "../../constants/colors";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
 import { Skeleton } from "../../components/ui/skeleton";
+import { CategoryIcon } from "../../components/ui/category-icon";
 
 // Helper to get ordinal suffix for a day
 const getOrdinal = (n: number) => {
@@ -143,7 +144,11 @@ export const RecurringTransactionsScreen: React.FC = () => {
                           { backgroundColor: `${catColor}20` },
                         ]}
                       >
-                        <Text style={styles.rowIcon}>{catIcon}</Text>
+                        <CategoryIcon
+                          icon={catIcon}
+                          size={24}
+                          style={styles.rowIcon as any}
+                        />
                       </View>
                       <View style={styles.rowText}>
                         <Text

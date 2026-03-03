@@ -15,6 +15,7 @@ import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { BRAND } from "../../constants/colors";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
 import { BudgetProgressBar } from "../../components/budget/budget-progress-bar";
+import { CategoryIcon } from "../../components/ui/category-icon";
 import { formatINR } from "../../utils/greeting";
 import { Routes, Navigators } from "../../constants/routes";
 import { MainTabsParamList } from "../../types/navigation";
@@ -97,7 +98,11 @@ export const BudgetDetailScreen: React.FC = () => {
             <GlassmorphicCard key={budget.id} style={styles.budgetCard}>
               <View style={styles.cardHeader}>
                 <View style={styles.catInfo}>
-                  <Text style={styles.catIcon}>{cat?.icon || "💰"}</Text>
+                  <CategoryIcon
+                    icon={cat?.icon}
+                    size={24}
+                    style={styles.catIcon as any}
+                  />
                   <Text
                     style={[styles.catName, { color: colors.TEXT_PRIMARY }]}
                   >

@@ -10,6 +10,7 @@
 
 import React, { useCallback } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -96,7 +97,11 @@ const TransactionCardInner: React.FC<TransactionCardProps> = ({
       <View
         style={[styles.iconContainer, { backgroundColor: `${catColor}20` }]}
       >
-        <Text style={styles.iconText}>{catIcon}</Text>
+        {catIcon.length > 2 ? (
+          <Ionicons name={catIcon as any} size={22} color={catColor} />
+        ) : (
+          <Text style={styles.iconText}>{catIcon}</Text>
+        )}
       </View>
 
       {/* Description + Category + Date */}

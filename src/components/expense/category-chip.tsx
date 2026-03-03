@@ -22,6 +22,7 @@ import {
   type TransactionType,
 } from "../../constants/categories";
 import { useCategories } from "../../hooks/use-categories";
+import { CategoryIcon } from "../ui/category-icon";
 
 // ── Single Chip ──────────────────────────────────────────────────────────
 
@@ -63,7 +64,7 @@ const CategoryChipItem: React.FC<CategoryChipProps> = React.memo(
         accessibilityRole="button"
         accessibilityState={{ selected }}
       >
-        <Text style={styles.chipIcon}>{category.icon}</Text>
+        <CategoryIcon icon={category.icon} size={18} style={styles.chipIcon} />
         <Text
           style={[
             styles.chipLabel,

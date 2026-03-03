@@ -36,12 +36,18 @@ export const LoginScreen: React.FC = () => {
       return;
     }
 
+    console.log("LOGIN: Attempting sign in with", email);
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
     setLoading(false);
+
+    console.log("LOGIN RESULT:", {
+      data: data?.user?.id,
+      error: error?.message,
+    });
 
     if (error) {
       Alert.alert("Login Failed", error.message);

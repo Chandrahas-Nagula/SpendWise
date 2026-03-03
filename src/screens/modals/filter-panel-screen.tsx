@@ -15,6 +15,7 @@ import Animated, { FadeInUp } from "react-native-reanimated";
 import { useTheme } from "../../hooks/use-theme";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
 import { useCategories } from "../../hooks/use-categories";
+import { CategoryIcon } from "../../components/ui/category-icon";
 import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { BRAND } from "../../constants/colors";
 
@@ -227,7 +228,11 @@ export const FilterPanelScreen: React.FC = () => {
                     },
                   ]}
                 >
-                  <Text style={styles.presetIcon}>{preset.icon}</Text>
+                  <CategoryIcon
+                    icon={preset.icon}
+                    size={20}
+                    style={styles.presetIcon as any}
+                  />
                   <Text
                     style={[
                       styles.presetLabel,
@@ -267,7 +272,11 @@ export const FilterPanelScreen: React.FC = () => {
                 },
               ]}
             >
-              <Text style={styles.categoryIcon}>🌐</Text>
+              <CategoryIcon
+                icon="🌐"
+                size={16}
+                style={styles.categoryIcon as any}
+              />
               <Text
                 style={[
                   styles.categoryLabel,
@@ -299,7 +308,11 @@ export const FilterPanelScreen: React.FC = () => {
                     },
                   ]}
                 >
-                  <Text style={styles.categoryIcon}>{cat.icon}</Text>
+                  <CategoryIcon
+                    icon={cat.icon}
+                    size={16}
+                    style={styles.categoryIcon as any}
+                  />
                   <Text
                     style={[
                       styles.categoryLabel,

@@ -20,7 +20,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     // Get the initial session on app load
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data: { session }, error }) => {
+      console.log("AUTH INIT: Session loaded", !!session, error?.message);
       setSession(session);
       setUser(session?.user ?? null);
       setIsInitialized(true);
@@ -29,7 +30,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     // Listen for auth state changes (login, logout, token refresh)
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log("AUTH STATE CHANGE:", event, !!session);
       setSession(session);
       setUser(session?.user ?? null);
     });

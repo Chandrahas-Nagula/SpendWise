@@ -15,6 +15,7 @@ import { useAnalytics, Timeframe } from "../../hooks/use-analytics";
 import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
 import { BRAND } from "../../constants/colors";
 import { GlassmorphicCard } from "../../components/ui/glassmorphic-card";
+import { CategoryIcon } from "../../components/ui/category-icon";
 import { formatINR } from "../../utils/greeting";
 
 const TIMEFRAMES: { label: string; value: Timeframe }[] = [
@@ -199,7 +200,11 @@ export const AnalyticsScreen: React.FC = () => {
                           { backgroundColor: cat.color },
                         ]}
                       />
-                      <Text style={[styles.legendIcon]}>{cat.icon}</Text>
+                      <CategoryIcon
+                        icon={cat.icon}
+                        size={14}
+                        style={styles.legendIcon as any}
+                      />
                       <Text
                         style={[
                           styles.legendName,

@@ -638,12 +638,11 @@ export const DashboardScreen: React.FC = () => {
               data={chartData}
               maxValue={chartMax}
               stepValue={chartStep}
-              barWidth={50}
+              barWidth={40}
               spacing={50}
-              initialSpacing={30}
-              endSpacing={30}
+              initialSpacing={40}
+              endSpacing={40}
               roundedTop
-              roundedBottom
               noOfSections={4}
               yAxisThickness={0}
               xAxisThickness={0}
@@ -661,6 +660,7 @@ export const DashboardScreen: React.FC = () => {
               animationDuration={800}
               height={180}
               barBorderRadius={8}
+              frontColor={colors.BORDER}
               disablePress
               width={240}
             />

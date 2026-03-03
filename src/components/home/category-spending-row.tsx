@@ -8,6 +8,7 @@
 
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 import { useTheme } from "../../hooks/use-theme";
 import { SPACING, RADIUS, FONT_SIZE, FONT_WEIGHT } from "../../constants/sizes";
@@ -45,7 +46,11 @@ export const CategorySpendingRow: React.FC<CategorySpendingRowProps> = ({
       <View style={styles.topRow}>
         <View style={styles.leftGroup}>
           <View style={[styles.iconCircle, { backgroundColor: `${color}20` }]}>
-            <Text style={styles.iconText}>{icon}</Text>
+            {icon.length > 2 ? (
+              <Ionicons name={icon as any} size={18} color={color} />
+            ) : (
+              <Text style={styles.iconText}>{icon}</Text>
+            )}
           </View>
           <Text
             style={[styles.categoryName, { color: colors.TEXT_PRIMARY }]}
