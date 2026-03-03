@@ -29,7 +29,7 @@ const GREETING_LABELS: Record<GreetingPeriod, string> = {
  */
 export const getTimeGreeting = (name: string): string => {
   const period = getPeriod(new Date().getHours());
-  return `${GREETING_LABELS[period]}, ${name} 👋`;
+  return `${GREETING_LABELS[period]},\n${name} 👋`;
 };
 
 /**
