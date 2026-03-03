@@ -23,33 +23,33 @@
 
 ### 🔐 Authentication Flow
 
-|   Onboarding   |     Login      |    Sign Up     |
-| :------------: | :------------: | :------------: |
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
+|                   Onboarding                    |                    Login                    |                     Sign Up                     |
+| :---------------------------------------------: | :-----------------------------------------: | :---------------------------------------------: |
+| ![Splash](assets/screenshots/Splash_screen.jpg) | ![Login](assets/screenshots/Login_page.jpg) | ![Sign In](assets/screenshots/Sign_in_page.jpg) |
 
 ### 🏠 Core Experience
 
-|   Dashboard    |  Add Expense   |  Transactions  |
-| :------------: | :------------: | :------------: |
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
+|                       Dashboard                       |                        Add Expense                        |                       Transactions                        |
+| :---------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: |
+| ![Dashboard](assets/screenshots/Home_screen_dark.jpg) | ![Add Expense](assets/screenshots/Add_expense_1_dark.jpg) | ![Transactions](assets/screenshots/Transactions_dark.jpg) |
 
 ### 📊 Analytics & Insights
 
-| Analytics (Pie Chart) | Analytics (Bar Chart) | Budget Overview |
-| :-------------------: | :-------------------: | :-------------: |
-|    _(screenshot)_     |    _(screenshot)_     | _(screenshot)_  |
+|                 Analytics (Pie Chart)                 |                   Analytics (Bar Chart)                   |                   Budget Overview                    |
+| :---------------------------------------------------: | :-------------------------------------------------------: | :--------------------------------------------------: |
+| ![Analytics 1](assets/screenshots/Analytics_dark.jpg) | ![Analytics 2](assets/screenshots/Analytics_screen_2.jpg) | ![Filter](assets/screenshots/Filter_transaction.jpg) |
 
 ### 🏆 Gamification & Profile
 
-|  Achievements  |    Profile     |    Settings    |
-| :------------: | :------------: | :------------: |
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
+|                  Achievements                   |                     Profile                     |                       Settings                        |
+| :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------------: |
+| ![Home 2](assets/screenshots/Home_screen_2.jpg) | ![Profile](assets/screenshots/Profile_dark.jpg) | ![Settings](assets/screenshots/Settings_screen_1.jpg) |
 
 ### 🔧 Management Screens
 
-|   Categories   | Recurring Transactions | Export Reports |
-| :------------: | :--------------------: | :------------: |
-| _(screenshot)_ |     _(screenshot)_     | _(screenshot)_ |
+|                   Categories                    |             Recurring Transactions              |                    Export Reports                     |
+| :---------------------------------------------: | :---------------------------------------------: | :---------------------------------------------------: |
+| ![Home 3](assets/screenshots/Home_screen_3.jpg) | ![Home 4](assets/screenshots/Home_screen_4.jpg) | ![Profile 2](assets/screenshots/Profile_screen_2.jpg) |
 
 ---
 
