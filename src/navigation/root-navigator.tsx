@@ -38,8 +38,7 @@ export const RootNavigator: React.FC = () => {
     return null;
   }
 
-  // TEMP: bypass auth for dashboard preview (revert later)
-  const isAuthenticated = true; // !!session;
+  const isAuthenticated = !!session;
 
   return (
     <Root.Navigator
